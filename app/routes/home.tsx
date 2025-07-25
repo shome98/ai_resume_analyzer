@@ -1,3 +1,4 @@
+import Navbar from "~/components/Navbar";
 import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     // need to change the bg as it is rounded on top side make it bit eye friendly
     <main className="bg-[url('/images/bg-main.svg')] bg-cover">
+      <Navbar/>
       <section className="main-section">
         <div className="page-heading">
           <h1>Track your Appliaction & Resume Ratings</h1>
