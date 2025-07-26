@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
         <Link to="/">
             <p className="text-2xl font-bold text-gradient">ResuAi</p>
         </Link>
-        <Link to="/unpload" className="primary-button w-fit">Upload Resume</Link>
+        <Link to="/upload" className="primary-button w-fit">Upload Resume</Link>
   </nav>;
 };
 
