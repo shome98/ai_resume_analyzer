@@ -13,7 +13,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return (
     // need to change the bg as it is rounded on top side make it bit eye friendly
-    <main className="bg-[url('/images/bg-main.svg')] bg-cover">
+    <main className="main-bg">
       <Navbar />
       <section className="main-section">
         <div className="page-heading">

@@ -127,6 +127,10 @@ form {
   .uploader-selected-file {
     @apply flex items-center justify-between p-3 bg-gray-50 rounded-2xl;
   }
+
+  .main-bg{
+    @apply bg-[url('/images/bg-main.svg')] bg-cover
+  }
 }
 
 @utility bg-gradient {
