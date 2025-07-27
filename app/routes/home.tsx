@@ -2,6 +2,9 @@ import Navbar from "~/components/Navbar";
 import type { Route } from "./+types/home";
 import { resumes } from "constants/constants";
 import { ResumeCard } from "~/components/ResumeCard";
+import { useEffect } from "react";
+import { usePuterStore } from "~/lib/puter";
+import { useNavigate } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -11,6 +14,12 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
+  const { auth } = usePuterStore();
+  const navigate = useNavigate();
+   useEffect(() => {
+     if (!auth.isAuthenticated) navigate("/auth?next=/");
+   }, [auth.isAuthenticated]);
+
   return (
     // need to change the bg as it is rounded on top side make it bit eye friendly
     <main className="main-bg">
