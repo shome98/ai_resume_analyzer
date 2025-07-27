@@ -131,6 +131,14 @@ form {
   .main-bg{
     @apply bg-[url('/images/bg-main.svg')] bg-cover
   }
+
+  .auth-heading{
+    @apply flex flex-col items-center gap-2 text-center
+  }
+
+  .auth-section{
+    @apply flex flex-col gap-8 rounded-2xl bg-white p-10
+  }
 }
 
 @utility bg-gradient {
