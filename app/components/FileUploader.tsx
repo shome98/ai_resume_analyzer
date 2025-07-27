@@ -61,13 +61,15 @@ const FileUploader: React.FC<FileUploaderProps> = ({ onFileSelect }) => {
                 </div>
               </div>
               <button className="p-2 cursor-pointer" onClick={handleRemoveFile}>
-                <span className="text-lg font-bold">❌</span>
+                {/* <span className="text-lg font-bold">❌</span> */}
+                <img src="/icons/cross.svg" alt="remove" className="w-4 h-4" />
               </button>
             </div>
           ) : (
             <div>
               <div className="mx-auto w-16 h-16 flex items-center justify-center mb-2">
-                <span className="text-6xl">ℹ️</span>
+                {/* <span className="text-6xl">ℹ️</span> */}
+                <img src="/icons/info.svg" alt="upload" className="size-20" />
               </div>
               <p className="text-lg text-gray-500">
                 <span className="font-semibold">Click to upload</span> or drag
