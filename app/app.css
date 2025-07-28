@@ -144,6 +144,10 @@ form {
   .form-container{
     @apply flex flex-col gap-4 mt-8
   }
+
+  .resume-pic-bg{
+    @apply bg-[url('/images/bg-small.svg')] bg-cover h-[100vh] sticky top-0 items-center justify-center
+  }
 }
 
 @utility bg-gradient {
