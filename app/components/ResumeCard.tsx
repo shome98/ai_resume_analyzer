@@ -1,5 +1,7 @@
 import { Link } from "react-router";
 import ScoreCircle from "./ScoreCircle";
+import { useEffect, useState } from "react";
+import { usePuterStore } from "~/lib/puter";
 
 type ResumeCardProps = { resume: Resume };
 
@@ -9,7 +11,20 @@ export const ResumeCard: React.FC<ResumeCardProps> = ({
   resume: Resume;
     }) => {
     
-    const resumeUrl = imagePath;//modify later for puterjs
+  
+  const { fs } = usePuterStore();
+  const [resumeUrl, setResumeUrl] = useState("");
+
+  useEffect(() => {
+    const loadResume = async () => {
+      const blob = await fs.read(imagePath);
+      if (!blob) return;
+      let url = URL.createObjectURL(blob);
+      setResumeUrl(url);
+    };
+
+    loadResume();
+  }, [imagePath]);
   return (
     <Link
       to={`/resume/${id}`}
