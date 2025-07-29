@@ -61,7 +61,7 @@ const resume = () => {
       </nav>
       <div className="flex flex-row w-full max-lg:flex-col-reverse">
         {/* image of resume */}
-        <section className="feedback-section resume-pic-bg">
+        <section className="feedback-section">
           {imageUrl && resumeUrl && (
             <div className="animate-in fade-in duration-1000 gradient-border max-sm:m-0 h-[80%] max-wxl:h-fit w-fit">
               <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
